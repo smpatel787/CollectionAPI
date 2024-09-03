@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "cedf40a3-5637-400f-8305-bbc11c3226e8",
+		"name": "Sample1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4358774",
+		"_collection_link": "https://warped-eclipse-229201.postman.co/workspace/MyAPIWithNaveen~ba91dbe9-5007-4a52-8e69-d6bbd2eb3138/collection/4358774-cedf40a3-5637-400f-8305-bbc11c3226e8?action=share&source=collection_link&creator=4358774"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sumit\",\r\n    \"company\": \"amazon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/post",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
